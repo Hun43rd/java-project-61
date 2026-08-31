@@ -20,7 +20,12 @@ class Game2 {
         if (answer.equals(correctAnswer)) {
             System.out.println("Correct!");
         } else {
-            System.out.println("'" + answer + "' is wrong answer;(. Correct answer was '" + correctAnswer + "'.");
+            System.out.println(
+                    "'"
+                            + answer
+                            + "' is wrong answer;(. Correct answer was '"
+                            + correctAnswer
+                            + "'.");
         }
     }
 }
@@ -60,7 +65,8 @@ class Game3 {
         if (result == answer) {
             System.out.println("Correct!");
         } else {
-            System.out.println("'" + answer + "' is wrong answer ;(. Correct answer was '" + result + "'.");
+            System.out.println(
+                    "'" + answer + "' is wrong answer ;(. Correct answer was '" + result + "'.");
         }
     }
 }

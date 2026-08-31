@@ -4,6 +4,7 @@ plugins {
     application
     id("org.sonarqube") version "7.3.1.8318"
     checkstyle
+    id("com.diffplug.spotless") version "8.10.1"
 }
 
 group = "hexlet.code"
@@ -39,4 +40,13 @@ checkstyle {
     configFile = file("config/checkstyle/checkstyle.xml")
     isShowViolations = true
     isIgnoreFailures = false
+}
+spotless {
+    java {
+        importOrder()
+        removeUnusedImports()
+        googleJavaFormat().aosp()
+        formatAnnotations()
+        leadingTabsToSpaces(4)
+    }
 }
