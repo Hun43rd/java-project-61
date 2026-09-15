@@ -50,7 +50,7 @@ class Game3 {
         int firstNumber = RandomNumber.getNumber();
         int secondNumber = RandomNumber.getNumber();
 
-        String text = firstNumber + randomElement + secondNumber;
+        String text = firstNumber + " " + randomElement + " " + secondNumber;
         System.out.println("Question: " + text);
         System.out.print("Your answer: ");
         int answer = scanner.nextInt();
