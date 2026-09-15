@@ -2,7 +2,6 @@ plugins {
     id("java")
     id("com.github.ben-manes.versions") version "0.54.0"
     application
-    id("org.sonarqube") version "7.3.1.8318"
     checkstyle
     id("com.diffplug.spotless") version "8.10.1"
 }
@@ -28,12 +27,6 @@ application {
 }
 tasks.getByName("run", JavaExec::class) {
     standardInput = System.`in`
-}
-sonar {
-  properties {
-    property("sonar.projectKey", "Hun43rd_java-project-61")
-    property("sonar.organization", "hun43rd")
-  }
 }
 checkstyle {
     toolVersion = "10.12.4"

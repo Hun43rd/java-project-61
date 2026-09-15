@@ -9,20 +9,44 @@ class Engine {
             case 3:
                 System.out.println("What is the result of the expression?");
                 break;
-            default:
+            case 4:
+                System.out.println("Find the greatest common divisor of given numbers.");
                 break;
+            case 5:
+                System.out.println("What number is missing in the progression?");
+                break;
+            case 6:
+                System.out.println("Answer 'yes' if given number is prime. Otherwise answer 'no'.");
+                break;
+            default:
+                return;
         }
 
         for (int i = 0; i < 3; i++) {
+            int res;
             switch (gameNumber) {
                 case 2:
-                    Game2.evenGame();
+                    res = Game2.evenGame();
                     break;
                 case 3:
-                    Game3.calcGame();
+                    res = Game3.calcGame();
+                    break;
+                case 4:
+                    res = Game4.GCD();
+                    break;
+                case 5:
+                    res = Game5.progression();
+                    break;
+                case 6:
+                    res = Game6.Prime();
                     break;
                 default:
-                    break;
+                    return;
+            }
+
+            if (res == 1) {
+                System.out.println("Let's try again, " + userName + "!");
+                return;
             }
         }
         System.out.println("Congratulations, " + userName + "!");
