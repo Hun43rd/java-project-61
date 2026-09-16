@@ -32,13 +32,13 @@ class Engine {
                     res = Game3.calcGame();
                     break;
                 case 4:
-                    res = Game4.GCD();
+                    res = Game4.gcd();
                     break;
                 case 5:
                     res = Game5.progression();
                     break;
                 case 6:
-                    res = Game6.Prime();
+                    res = Game6.prime();
                     break;
                 default:
                     return;

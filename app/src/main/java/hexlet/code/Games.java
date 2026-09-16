@@ -83,7 +83,7 @@ class Game3 {
 }
 
 class Game4 {
-    public static int GCD() {
+    public static int gcd() {
         int a = RandomNumber.getNumber();
         int b = RandomNumber.getNumber();
         Scanner scanner = new Scanner(System.in);
@@ -154,7 +154,7 @@ class Game5 {
 }
 
 class Game6 {
-    public static int Prime() {
+    public static int prime() {
         Scanner scanner = new Scanner(System.in);
         int number = RandomNumber.getNumber();
         boolean isSimple = Game6.isSimple(number);
