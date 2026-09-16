@@ -4,6 +4,7 @@ plugins {
     application
     checkstyle
     id("com.diffplug.spotless") version "8.10.1"
+    id("org.sonarqube") version "7.5.0.8588"
 }
 
 group = "hexlet.code"
@@ -41,5 +42,12 @@ spotless {
         googleJavaFormat().aosp()
         formatAnnotations()
         leadingTabsToSpaces(4)
+    }
+}
+sonar {
+    properties {
+        property("sonar.projectKey", "ваш_ключ_проекта_из_SonarCloud")
+        property("sonar.organization", "ваша_организация_из_SonarCloud")
+        property("sonar.host.url", "https://sonarcloud.io")
     }
 }
