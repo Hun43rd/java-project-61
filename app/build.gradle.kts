@@ -46,8 +46,8 @@ spotless {
 }
 sonar {
     properties {
-        property("sonar.projectKey", "ваш_ключ_проекта_из_SonarCloud")
-        property("sonar.organization", "ваша_организация_из_SonarCloud")
+        property("sonar.projectKey", "Hun43rd_java-project-61")
+        property("sonar.organization", "hun43rd")
         property("sonar.host.url", "https://sonarcloud.io")
     }
 }
