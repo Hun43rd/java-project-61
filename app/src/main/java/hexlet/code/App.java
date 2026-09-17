@@ -19,21 +19,28 @@ class App {
         int game = scanner.nextInt();
         scanner.nextLine();
 
-        System.out.println("\nWelcome to the Brain Games!");
-        String userName = Cli.getName();
-
-        Engine.gameChoose(userName, game);
-
+        switch (game) {
+            case 1:
+                Cli.greet();
+                break;
+            case 2:
+                Game2.evenGame();
+                break;
+            case 3:
+                Game3.calcGame();
+                break;
+            case 4:
+                Game4.gcd();
+                break;
+            case 5:
+                Game5.progression();
+                break;
+            case 6:
+                Game6.prime();
+                break;
+            default:
+                return;
+        }
         scanner.close();
-    }
-}
-
-class Cli {
-    public static String getName() {
-        Scanner scanner = new Scanner(System.in);
-        System.out.print("May I have your name? ");
-        String name = scanner.nextLine();
-        System.out.println("Hello, " + name + "!");
-        return name;
     }
 }
