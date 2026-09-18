@@ -4,14 +4,14 @@ import java.util.List;
 import java.util.Random;
 
 class Game3 {
+    private static final Random RANDOM  = new Random();
     public static void calcGame() {
         String text = "What is the result of the expression?";
         String[][] qaArray = new String[3][2];
 
         for (int i = 0; i < qaArray.length; i++) {
-            Random random = new Random();
             List<String> list = List.of("*", "+", "-");
-            String randomElement = list.get(random.nextInt(list.size()));
+            String randomElement = list.get(RANDOM.nextInt(list.size()));
             int firstNumber = RandomNumber.getNumber();
             int secondNumber = RandomNumber.getNumber();
 

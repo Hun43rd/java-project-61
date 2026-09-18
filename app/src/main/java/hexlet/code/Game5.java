@@ -3,16 +3,17 @@ package hexlet.code;
 import java.util.Random;
 
 class Game5 {
+    private static final Random RANDOM = new Random();
     public static void progression() {
-        Random random = new Random();
+        //Random random = new Random();
         String text = "What number is missing in the progression?";
         String[][] qaArray = new String[3][2];
 
         for (int i = 0; i < qaArray.length; i++) {
-            int step = random.nextInt(10) + 1;
-            int length = random.nextInt(5, 11);
+            int step = RANDOM .nextInt(10) + 1;
+            int length = RANDOM .nextInt(5, 11);
             int start = RandomNumber.getNumber();
-            int missingPart = random.nextInt(length);
+            int missingPart = RANDOM .nextInt(length);
 
             String[] newArray = arrayCreation(length, step, start);
             String res = newArray[missingPart];
