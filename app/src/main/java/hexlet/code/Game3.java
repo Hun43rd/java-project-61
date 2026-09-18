@@ -4,7 +4,8 @@ import java.util.List;
 import java.util.Random;
 
 class Game3 {
-    private static final Random RANDOM  = new Random();
+    private static final Random RANDOM = new Random();
+
     public static void calcGame() {
         String text = "What is the result of the expression?";
         String[][] qaArray = new String[3][2];
