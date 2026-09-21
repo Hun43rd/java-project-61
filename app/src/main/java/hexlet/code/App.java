@@ -24,22 +24,22 @@ class App {
                 Cli.greet();
                 break;
             case 2:
-                Game2.evenGame();
+                Even.game();
                 break;
             case 3:
-                Game3.calcGame();
+                Calc.game();
                 break;
             case 4:
-                Game4.gcd();
+                Gcd.game();
                 break;
             case 5:
-                Game5.progression();
+                Progression.game();
                 break;
             case 6:
-                Game6.prime();
+                Prime.game();
                 break;
             default:
-                return;
+                throw new RuntimeException("Unknown user choice: " + game);
         }
         scanner.close();
     }

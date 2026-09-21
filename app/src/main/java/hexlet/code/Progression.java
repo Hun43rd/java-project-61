@@ -2,19 +2,18 @@ package hexlet.code;
 
 import java.util.Random;
 
-class Game5 {
+class Progression {
     private static final Random RANDOM = new Random();
 
-    public static void progression() {
-        // Random random = new Random();
+    public static void game() {
         String text = "What number is missing in the progression?";
         String[][] qaArray = new String[3][2];
 
         for (int i = 0; i < qaArray.length; i++) {
-            int step = RANDOM.nextInt(10) + 1;
-            int length = RANDOM.nextInt(5, 11);
-            int start = RandomNumber.getNumber();
-            int missingPart = RANDOM.nextInt(length);
+            int step = RandomUtility.getStepForArray();
+            int length = RandomUtility.getLengthForArray();
+            int start = RandomUtility.getNumber();
+            int missingPart = RandomUtility.getNumber(length);
 
             String[] newArray = arrayCreation(length, step, start);
             String res = newArray[missingPart];
@@ -27,14 +26,12 @@ class Game5 {
     }
 
     public static String[] arrayCreation(int length, int step, int start) {
-        int[] array = new int[length];
         String[] stringArray = new String[length];
         stringArray[0] = String.valueOf(start);
-        array[0] = start;
 
         for (var i = 1; i < length; i++) {
-            array[i] = array[i - 1] + step;
-            stringArray[i] = String.valueOf(array[i]);
+            int prev = Integer.parseInt(stringArray[i - 1]);
+            stringArray[i] = String.valueOf(prev + step);
         }
         return stringArray;
     }
