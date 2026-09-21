@@ -1,7 +1,6 @@
 plugins {
     id("com.github.ben-manes.versions") version "0.54.0"
     application
-    id("org.sonarqube") version "7.3.1.8318"
     checkstyle
     id("com.diffplug.spotless") version "8.10.1"
 }
@@ -30,11 +29,4 @@ checkstyle {
     configFile = file("config/checkstyle/checkstyle.xml")
     isShowViolations = true
     isIgnoreFailures = false
-}
-
-sonar {
-    properties {
-        property("sonar.projectKey", "Hun43rd_java-project-61")
-        property("sonar.organization", "hun43rd")
-    }
 }
