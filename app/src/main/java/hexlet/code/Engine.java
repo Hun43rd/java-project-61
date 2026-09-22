@@ -12,7 +12,7 @@ class Engine {
         System.out.println("Hello, " + userName + "!");
         System.out.println(text);
 
-        for (int i = 0; i < 3; i++) {
+        for (int i = 0; i < Engine.ROUNDS; i++) {
             System.out.println("Question: " + array[i][0]);
             System.out.println("Your answer: ");
             var answer = scanner.next();
