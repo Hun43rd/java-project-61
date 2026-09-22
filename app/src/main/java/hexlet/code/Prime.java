@@ -3,10 +3,10 @@ package hexlet.code;
 class Prime {
     public static void game() {
         String text = "Answer 'yes' if given number is prime. Otherwise answer 'no'.";
-        String[][] qaArray = new String[3][2];
+        String[][] qaArray = new String[Engine.ROUNDS][2];
 
-        for (int i = 0; i < qaArray.length; i++) {
-            int number = RandomUtility.getNumber();
+        for (int i = 0; i < Engine.ROUNDS; i++) {
+            int number = RandomUtils.getNumber();
             boolean isSimple = isSimple(number);
 
             qaArray[i][0] = String.valueOf(number);

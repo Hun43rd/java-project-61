@@ -3,12 +3,12 @@ package hexlet.code;
 class Calc {
     public static void game() {
         String text = "What is the result of the expression?";
-        String[][] qaArray = new String[3][2];
+        String[][] qaArray = new String[Engine.ROUNDS][2];
 
-        for (int i = 0; i < qaArray.length; i++) {
-            String randomElement = RandomUtility.getSymbol();
-            int firstNumber = RandomUtility.getNumber();
-            int secondNumber = RandomUtility.getNumber();
+        for (int i = 0; i < Engine.ROUNDS; i++) {
+            String randomElement = RandomUtils.getSymbol();
+            int firstNumber = RandomUtils.getNumber();
+            int secondNumber = RandomUtils.getNumber();
 
             String expressionText = firstNumber + " " + randomElement + " " + secondNumber;
             qaArray[i][0] = expressionText;

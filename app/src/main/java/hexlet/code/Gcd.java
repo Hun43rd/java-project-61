@@ -3,21 +3,20 @@ package hexlet.code;
 class Gcd {
     public static void game() {
         String text = "Find the greatest common divisor of given numbers.";
-        String[][] qaArray = new String[3][2];
+        String[][] qaArray = new String[Engine.ROUNDS][2];
 
-        for (int i = 0; i < qaArray.length; i++) {
-            int a = RandomUtility.getNumber();
-            int b = RandomUtility.getNumber();
+        for (int i = 0; i < Engine.ROUNDS; i++) {
+            int a = RandomUtils.getNumber();
+            int b = RandomUtils.getNumber();
             String textGcd = a + " " + b;
 
             qaArray[i][0] = textGcd;
-            qaArray[i][1] = gcd(a, b);
+            qaArray[i][1] = String.valueOf(gcd(a, b));
         }
         Engine.gameEngine(text, qaArray);
     }
 
-    public static String gcd(int a, int b) {
-        int res = 0;
+    public static int gcd(int a, int b) {
         int c = 0;
 
         while (b != 0) {
@@ -25,7 +24,6 @@ class Gcd {
             a = b;
             b = c % b;
         }
-        res = a;
-        return String.valueOf(res);
+        return a;
     }
 }

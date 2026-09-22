@@ -1,19 +1,16 @@
 package hexlet.code;
 
-import java.util.Random;
-
 class Progression {
-    private static final Random RANDOM = new Random();
 
     public static void game() {
         String text = "What number is missing in the progression?";
-        String[][] qaArray = new String[3][2];
+        String[][] qaArray = new String[Engine.ROUNDS][2];
 
-        for (int i = 0; i < qaArray.length; i++) {
-            int step = RandomUtility.getStepForArray();
-            int length = RandomUtility.getLengthForArray();
-            int start = RandomUtility.getNumber();
-            int missingPart = RandomUtility.getNumber(length);
+        for (int i = 0; i < Engine.ROUNDS; i++) {
+            int step = RandomUtils.getStepForArray();
+            int length = RandomUtils.getLengthForArray();
+            int start = RandomUtils.getNumber();
+            int missingPart = RandomUtils.getNumber(length);
 
             String[] newArray = arrayCreation(length, step, start);
             String res = newArray[missingPart];
