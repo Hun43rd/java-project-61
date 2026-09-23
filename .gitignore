@@ -42,3 +42,8 @@ bin/
 
 ### Mac OS ###
 .DS_Store
+
+# Для игнорирования файлов Run, Get, For
+Run
+Get
+For

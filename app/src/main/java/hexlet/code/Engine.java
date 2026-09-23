@@ -2,7 +2,7 @@ package hexlet.code;
 
 import java.util.Scanner;
 
-class Engine {
+public class Engine {
     public static final int ROUNDS = 3;
     public static void gameEngine(String text, String[][] array) {
         Scanner scanner = new Scanner(System.in);

@@ -1,6 +1,8 @@
-package hexlet.code;
+package hexlet.code.games;
+import hexlet.code.Engine;
+import hexlet.code.RandomUtils;
 
-class Gcd {
+public class Gcd {
     public static void game() {
         String text = "Find the greatest common divisor of given numbers.";
         String[][] qaArray = new String[Engine.ROUNDS][2];

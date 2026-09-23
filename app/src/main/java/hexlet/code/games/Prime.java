@@ -1,21 +1,23 @@
-package hexlet.code;
+package hexlet.code.games;
+import hexlet.code.Engine;
+import hexlet.code.RandomUtils;
 
-class Prime {
+public class Prime {
     public static void game() {
         String text = "Answer 'yes' if given number is prime. Otherwise answer 'no'.";
         String[][] qaArray = new String[Engine.ROUNDS][2];
 
         for (int i = 0; i < Engine.ROUNDS; i++) {
             int number = RandomUtils.getNumber();
-            boolean isSimple = isSimple(number);
+            boolean isPrime = isPrime(number);
 
             qaArray[i][0] = String.valueOf(number);
-            qaArray[i][1] = isSimple(number) ? "yes" : "no";
+            qaArray[i][1] = isPrime(number) ? "yes" : "no";
         }
         Engine.gameEngine(text, qaArray);
     }
 
-    public static boolean isSimple(int number) {
+    public static boolean isPrime(int number) {
         if (number < 2) {
             return false;
         }

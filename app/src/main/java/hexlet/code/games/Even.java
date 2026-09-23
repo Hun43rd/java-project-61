@@ -1,6 +1,8 @@
-package hexlet.code;
+package hexlet.code.games;
+import hexlet.code.Engine;
+import hexlet.code.RandomUtils;
 
-class Even {
+public class Even {
     public static void game() {
         String text = "Answer 'yes' if the number is even, otherwise answer 'no'.";
 

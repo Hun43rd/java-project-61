@@ -1,6 +1,8 @@
-package hexlet.code;
+package hexlet.code.games;
+import hexlet.code.Engine;
+import hexlet.code.RandomUtils;
 
-class Calc {
+public class Calc {
     public static void game() {
         String text = "What is the result of the expression?";
         String[][] qaArray = new String[Engine.ROUNDS][2];

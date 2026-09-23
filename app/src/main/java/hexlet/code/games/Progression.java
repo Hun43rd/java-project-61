@@ -1,6 +1,8 @@
-package hexlet.code;
+package hexlet.code.games;
+import hexlet.code.Engine;
+import hexlet.code.RandomUtils;
 
-class Progression {
+public class Progression {
 
     public static void game() {
         String text = "What number is missing in the progression?";
